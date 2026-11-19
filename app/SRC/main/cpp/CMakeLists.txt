@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(nova_native)
+add_library(nova_native SHARED native-lib.cpp)
+find_library(log-lib log)
+target_link_libraries(nova_native ${log-lib})
